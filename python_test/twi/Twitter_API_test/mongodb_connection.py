@@ -1,12 +1,21 @@
+import json
 import pymongo
 from pymongo import MongoClient
 
-client = MongoClient('localhost', 27017)
+client = MongoClient("mongodb+srv://Nekit:1234@cluster0-q6s9c.mongodb.net/test?retryWrites=true&w=majority")
+#client = MongoClient('localhost', 27017)
 
-db = client["pymongo_db"]
+db = client["test_db"]
 collection = db["twitter_json"] 
 
-post = {"_id": 0, "Таблица": "Тестовая", "Работает":"Отлично"}
+#post = {"_id": "1","Таблица": "Тестовая", "Работает":"Отлично"}
 
-collection.insert_one(post)
+with open('Filtered.json') as f:
+    file_data = json.load(f)
+
+
+collection.insert_one(file_data)
 print("Access Garanted")
+
+
+#result = collection.delete_many({})
