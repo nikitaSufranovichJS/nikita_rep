@@ -14,18 +14,22 @@ class test_case(unittest.TestCase):
         
         filterDict = twit_dating.filterDictionary({},[])
         self.assertDictEqual(filterDict,{})
+    
+
+    def test_empty_breakWords(self):
+        breakWords = self.breakWord
+
+        for word in breakWords:
+            containsbreakWords = word
+            self.assertNotEqual(containsbreakWords, breakWords)
+
 
     def test_count_tweets(self):
         twit_dating = twitter_data()
 
         counting = twit_dating.get_by_query("Weather", 50)
         self.assertEqual(len(counting), 50)
-
-    def test_contains_wordKeys(self):
-        twit_dating = twitter_data()
-
-        wordKeys = twit_dating.filterDictionary(dict_filter, self.wordKey)
-        
+   
 
 
 unittest.main() 
