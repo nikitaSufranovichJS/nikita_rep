@@ -21,7 +21,7 @@ class TwitterData:
         return query_dict
 
 
-    def filterDictionary(self, dict_filter, wordKeys):
+    def filter_dictionary(self, dict_filter, wordKeys):
         filter_values_Dict = {}
         for key, value in dict_filter.items():
             for wordKey in wordKeys:
@@ -30,7 +30,7 @@ class TwitterData:
         return filter_values_Dict         
 
 
-    def breakWordDictionary(self, dict_filter, breakWords):
+    def filter_breakword_dictionary(self, dict_filter, breakWords):
         break_word_Dict = {}
         for key, value in dict_filter.items():
             for breakWord in breakWords:

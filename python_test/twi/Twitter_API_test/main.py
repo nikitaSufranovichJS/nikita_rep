@@ -22,7 +22,7 @@ key_word = ["Bernd Leno","Emiliano Martinez","Matt Macey","Hector Bellerin","Kie
 
 key_breakword = ["league","champoinship","lose"]
 
-filter_dictionary = twitter_data.filterDictionary(saved_dictionary, key_word)
+filter_dictionary = twitter_data.filter_dictionary(saved_dictionary, key_word)
 
 twitter_handler = twitter_data.handler(saved_dictionary, key_word, key_breakword)
 

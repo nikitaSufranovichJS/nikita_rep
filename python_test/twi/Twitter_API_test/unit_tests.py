@@ -12,7 +12,7 @@ class test_case(unittest.TestCase):
     def test_empty_dict(self):
         twit_dating = TwitterData()
         
-        filterDict = twit_dating.filterDictionary({},[])
+        filterDict = twit_dating.filter_dictionary({},[])
         self.assertDictEqual(filterDict,{})
     
 
