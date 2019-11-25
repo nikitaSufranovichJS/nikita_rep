@@ -1,15 +1,15 @@
 import unittest
 import json
 import tweepy
-from file_manager import save_service
+from file_manager import TwitterSaveManager
 from tweepy import OAuthHandler
-from twitter_connect import twitter_connector
+from twitter_connect import TwitterConnect
 from tweepy import API
 
 
-class twitter_data:
+class TwitterData:
 
-    twitter_api = twitter_connector()
+    twitter_api = TwitterConnect()
 
     def __init__(self):
         self.api = self.twitter_api.connect()        

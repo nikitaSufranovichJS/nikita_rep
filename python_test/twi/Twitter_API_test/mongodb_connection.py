@@ -2,20 +2,22 @@ import json
 import pymongo
 from pymongo import MongoClient
 
-client = MongoClient("mongodb+srv://Nekit:1234@cluster0-q6s9c.mongodb.net/test?retryWrites=true&w=majority")
-#client = MongoClient('localhost', 27017)
+#for PC: client = MongoClient('localhost', 27017)
 
+client = pymongo.MongoClient("mongodb+srv://Nikita:1234@cluster0-q6s9c.mongodb.net/test?retryWrites=true&w=majority")
 db = client["test_db"]
 collection = db["twitter_json"] 
 
-#post = {"_id": "1","Таблица": "Тестовая", "Работает":"Отлично"}
+print("access garanted")
 
-with open('Filtered.json') as f:
-    file_data = json.load(f)
-
-
-collection.insert_one(file_data)
-print("Access Garanted")
+post = {"Hey":"Bro"}
+collection.insert_one(post)
 
 
-#result = collection.delete_many({})
+
+#with open('Filtered.json') as f:
+#    file_data = json.load(f)
+#collection.insert_one(file_data)
+
+
+#Delete all records: result = collection.delete_many({})

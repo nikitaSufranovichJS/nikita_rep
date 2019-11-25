@@ -1,6 +1,6 @@
 import tweepy
 import unittest
-from twitter_data import twitter_data
+from twitter_data import TwitterData
 
 
 class test_case(unittest.TestCase):
@@ -10,7 +10,7 @@ class test_case(unittest.TestCase):
     breakWord = ["league","champoinship","lose"]
 
     def test_empty_dict(self):
-        twit_dating = twitter_data()
+        twit_dating = TwitterData()
         
         filterDict = twit_dating.filterDictionary({},[])
         self.assertDictEqual(filterDict,{})
@@ -25,7 +25,7 @@ class test_case(unittest.TestCase):
 
 
     def test_count_tweets(self):
-        twit_dating = twitter_data()
+        twit_dating = TwitterData()
 
         counting = twit_dating.get_by_query("Weather", 50)
         self.assertEqual(len(counting), 50)

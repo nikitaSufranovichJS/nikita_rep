@@ -1,30 +1,30 @@
 import tweepy
-from file_manager import save_service
 from tweepy import OAuthHandler
-from twitter_connect import twitter_connector
-from twitter_data import twitter_data
+from file_manager import TwitterSaveService
+from twitter_connect import TwitterConnect
+from twitter_data import TwitterData
 from tweepy import API
 
 #Twitter
-twit_connector = twitter_connector()
-twit_data = twitter_data()
-twit_save = save_service()
+twitter_connect = TwitterConnect()
+twitter_data = TwitterData()
+twitter_save_manager = TwitterSaveService()
 
-twit_connector.connect()
+twitter_connect.connect()
 
-data_save_dict = twit_data.get_by_query("Premier League",1000)
+saved_dictionary = twitter_data.get_by_query("Premier League",1000)
 
-twit_save.save_data(data_save_dict, "Premier League.json")
+twitter_save_manager.save_data(saved_dictionary, "Premier League.json")
 #twit_save.load_data(data_save_dict, "Premier League.json")
 
 
-wordKey = ["Bernd Leno","Emiliano Martinez","Matt Macey","Hector Bellerin","Kieran Tierney","Sokratis","Holding Rob","Mustafi Shrodran","Chambers Calum","Mavropanos Konstantios","Ceballos Dani","Ozil Mesut","Torreira Lucas","Maitland-Niles Ainsley","Willock Joe","Guendouzi Matteo","Smith Rowe Emile","Granit Xhaka","Alendre Lacaztte","Aubameyang","Martimelli Gabriel","Arsenal"]
+key_word = ["Bernd Leno","Emiliano Martinez","Matt Macey","Hector Bellerin","Kieran Tierney","Sokratis","Holding Rob","Mustafi Shrodran","Chambers Calum","Mavropanos Konstantios","Ceballos Dani","Ozil Mesut","Torreira Lucas","Maitland-Niles Ainsley","Willock Joe","Guendouzi Matteo","Smith Rowe Emile","Granit Xhaka","Alendre Lacaztte","Aubameyang","Martimelli Gabriel","Arsenal"]
 
-breakWord = ["league","champoinship","lose"]
+key_breakword = ["league","champoinship","lose"]
 
-first_twitter_filt = twit_data.filterDictionary(data_save_dict, wordKey)
+filter_dictionary = twitter_data.filterDictionary(saved_dictionary, key_word)
 
-twitter_handler = twit_data.handler(data_save_dict, wordKey, breakWord)
+twitter_handler = twitter_data.handler(saved_dictionary, key_word, key_breakword)
 
-twit_save.save_data(twitter_handler, "Filtered.json")
+twitter_save_manager.save_data(twitter_handler, "Filtered.json")
 #twit_save.load_data(twitter_handler, "Filtered.json")

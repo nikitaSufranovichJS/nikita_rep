@@ -2,7 +2,7 @@ import json
 import tweepy
 from tweepy import OAuthHandler
 
-class twitter_connector:
+class TwitterConnect:
     
     consumer_key = '9XdV4iYbBBl0kUtfrrfbjHX18'
     consumer_secret = 'TWJ65VeJw8YXU3bg2AjJjnYh7zdZx1FCmPVLeqWMeCzmwGtBWO'

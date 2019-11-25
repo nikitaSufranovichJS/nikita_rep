@@ -1,6 +1,6 @@
 import json
 
-class save_service:
+class TwitterSaveManager:
 
     def save_data(self, data, path):
         with open(path, 'w') as json_file:
