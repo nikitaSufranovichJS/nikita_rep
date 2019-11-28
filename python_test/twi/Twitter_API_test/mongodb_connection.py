@@ -1,21 +1,18 @@
-import json
+import datetime
+import json # import file_manager
 import pymongo
 from pymongo import MongoClient
+from bson import json_util
+from file_manager import TwitterFileManager
 
-client = MongoClient("mongodb+srv://Nekit:1234@cluster0-q6s9c.mongodb.net/test?retryWrites=true&w=majority")
-#client = MongoClient('localhost', 27017)
-
+#for PC: client = MongoClient('localhost', 27017)
+client = pymongo.MongoClient("mongodb+srv://nik:1234@cluster0-kofjw.mongodb.net/test?retryWrites=true&w=majority")
 db = client["test_db"]
 collection = db["twitter_json"] 
 
-#post = {"_id": "1","Таблица": "Тестовая", "Работает":"Отлично"}
 
-with open('Filtered.json') as f:
-    file_data = json.load(f)
+fileManager = TwitterFileManager()
+load = {}
+load = fileManager.load_data("Premier League.json")
 
-
-collection.insert_one(file_data)
-print("Access Garanted")
-
-
-#result = collection.delete_many({})
+result = collection.insert_one(load)

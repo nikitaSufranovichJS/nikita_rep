@@ -1,23 +1,22 @@
-import tweepy
 import unittest
-from twitter_data import twitter_data
+from twitter_data import TwitterData
 
 
-class test_case(unittest.TestCase):
+class test_case(unittest.TestCase):#upercase
 
-    wordKey = ["Bernd Leno","Emiliano Martinez","Matt Macey","Hector Bellerin","Kieran Tierney","Sokratis","Holding Rob","Mustafi Shrodran","Chambers Calum","Mavropanos Konstantios","Ceballos Dani","Ozil Mesut","Torreira Lucas","Maitland-Niles Ainsley","Willock Joe","Guendouzi Matteo","Smith Rowe Emile","Granit Xhaka","Alendre Lacaztte","Aubameyang","Martimelli Gabriel","Arsenal"]
+    keyWord = ["Bernd Leno","Emiliano Martinez","Matt Macey","Hector Bellerin","Kieran Tierney","Sokratis","Holding Rob","Mustafi Shrodran","Chambers Calum","Mavropanos Konstantios","Ceballos Dani","Ozil Mesut","Torreira Lucas","Maitland-Niles Ainsley","Willock Joe","Guendouzi Matteo","Smith Rowe Emile","Granit Xhaka","Alendre Lacaztte","Aubameyang","Martimelli Gabriel","Arsenal"]
 
-    breakWord = ["league","champoinship","lose"]
+    keyBreakWord = ["league","champoinship","lose"]
 
     def test_empty_dict(self):
-        twit_dating = twitter_data()
+        twit_dating = TwitterData()
         
-        filterDict = twit_dating.filterDictionary({},[])
+        filterDict = twit_dating.filter_dictionary({},[])
         self.assertDictEqual(filterDict,{})
     
 
     def test_empty_breakWords(self):
-        breakWords = self.breakWord
+        breakWords = self.keyBreakWord
 
         for word in breakWords:
             containsbreakWords = word
@@ -25,7 +24,7 @@ class test_case(unittest.TestCase):
 
 
     def test_count_tweets(self):
-        twit_dating = twitter_data()
+        twit_dating = TwitterData()
 
         counting = twit_dating.get_by_query("Weather", 50)
         self.assertEqual(len(counting), 50)
