@@ -22,12 +22,12 @@ body {
     text-align: center;
     background-color: #bdbdbd;
     border-radius: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 40px;
+    padding: 0 35px 30px 35px;
 }
 
 .main-text {
+    margin-top: 0;
+    padding: 20px 0 0 0;
     font-size: 35px;
     font-weight: 600;
     margin-bottom: 0;
@@ -35,8 +35,7 @@ body {
 
 .sub-text {
     margin-top: 0;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding: 0 60px 0 60px;
     font-size: 14px;
     font-weight: 600;
 }
@@ -44,8 +43,7 @@ body {
 .sign-up-content {
     display: block;
     text-align: center;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 0 30px 0 30px;
 }
 
 .sign-up-content input {
@@ -54,13 +52,13 @@ body {
     border: solid 1px #dbdbdb;
     height: 40px;
     width: 100%;
-    padding-left: 15px;
+    padding: 0 0 0 15px;
     margin-top: 10px;
+    outline: none;
 }
 
 .sign-up-button {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 0 30px 0 30px;
 }
 
 .sign-up-button button {
@@ -72,34 +70,72 @@ body {
     border-radius: 3px;
     border: none;
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0 10px 0;
+    outline: none;
 }
 
 .or {
     margin: 0;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding: 7px 0 7px 0;
     text-align: center;
     font-size: 17px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .sign-up-social {
     display: block;
     text-align: center;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 0 30px 0 30px;
 }
 
-.sign-up-social button{
+.sign-up-social button {
     margin-top: 10px;
     font-size: 14px;
     font-weight: 400;
     border-radius: 3px;
     border: none;
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0 10px 0;
+    color: #fff;
+    outline: none;
+}
 
+.btn-facebook {
+    background-color: #436ab0;
+}
+
+.btn-gmail {
+    background-color: #4489f1;
+}
+
+.btn-linkedin {
+    background-color: #1379b3;
+}
+
+.icon1 {
+    background-color: #2e4979;
+}
+
+.icon2 {
+    background-color: #305da2;
+}
+
+.icon3 {
+    background-color: #0c5a87;
+}
+
+.terms-footer p {
+    font-size: 12px;
+}
+
+.terms-footer a :hover {
+    color: #2f19c7;
+}
+
+.log-in-footer a {
+    text-decoration: none;
+}
+
+.log-in-footer a:visited {
+    color: #222;
 }
