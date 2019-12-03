@@ -1,0 +1,105 @@
+body {
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    background-color: #fff;
+}
+
+.content p {
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.login-form {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.main-content {
+    margin-top: 0;
+    max-width: 360px;
+    text-align: center;
+    background-color: #bdbdbd;
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+}
+
+.main-text {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.sub-text {
+    margin-top: 0;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sign-up-content {
+    display: block;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.sign-up-content input {
+    vertical-align: baseline;
+    border-radius: 3px;
+    border: solid 1px #dbdbdb;
+    height: 40px;
+    width: 100%;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.sign-up-button {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.sign-up-button button {
+    margin-top: 20px;
+    background-color: #00a79d;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    border-radius: 3px;
+    border: none;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.or {
+    margin: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.sign-up-social {
+    display: block;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.sign-up-social button{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 3px;
+    border: none;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
