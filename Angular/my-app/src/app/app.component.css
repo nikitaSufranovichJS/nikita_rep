@@ -53,7 +53,7 @@ body {
     height: 40px;
     width: 100%;
     padding: 0 0 0 15px;
-    margin-top: 10px;
+    margin-top: 22px;
     outline: none;
 }
 
@@ -62,7 +62,7 @@ body {
 }
 
 .sign-up-button button {
-    margin-top: 20px;
+    margin-top: 30px;
     background-color: #00a79d;
     color: #fff;
     font-size: 17px;
@@ -124,7 +124,6 @@ body {
     background-color: #0c5a87;
 }
 
-
 .terms-footer p {
     font-size: 12px;
 }
@@ -135,9 +134,25 @@ body {
 
 .log-in-footer a {
     text-decoration: none;
-    color:#222;
+    color: #222;
 }
 
 .log-in-footer a:visited {
     color: #222;
+}
+
+.req p {
+    position: absolute;
+    text-align: left;
+    color: #DC3735;
+    line-height: 0;
+    font-size: 11px;
+}
+
+input.ng-touched.ng-invalid {
+    border: solid #DC3735 1px;
+}
+
+input.ng-touched.ng-valid {
+    border: solid #56f466 1px;
 }
