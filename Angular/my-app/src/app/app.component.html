@@ -20,9 +20,17 @@
             <p class="sub-text">Find local and global suppliers, partnerships and customers</p>
         </div>
         <div class="sign-up-content">
-            <input type="text" name="Business name" placeholder="Business name">
-            <input type="email" autocomplete="off" name="Business email" placeholder="Business email">
-            <input type="text" name="Password" placeholder="Password">
+            <input type="text"
+                    name="Business name"
+                    placeholder="Business name"
+                    [(ngModel)]="user.name" #name="ngModel" required>
+
+            <div [hidden]="name.valid || name.untouched" class="alert alert-danger">
+                name has required
+            </div>
+
+            <input type="email" autocomplete="off" name="Business email" placeholder="Business email" required pattern="[a-zA-Z_]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}" >
+            <input type="text" name="Password" placeholder="Password" required>
         </div>
         <div class="sign-up-button">
             <button type="button">SIGN UP NOW</button>

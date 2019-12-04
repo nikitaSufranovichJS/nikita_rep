@@ -124,6 +124,7 @@ body {
     background-color: #0c5a87;
 }
 
+
 .terms-footer p {
     font-size: 12px;
 }
@@ -134,6 +135,7 @@ body {
 
 .log-in-footer a {
     text-decoration: none;
+    color:#222;
 }
 
 .log-in-footer a:visited {
