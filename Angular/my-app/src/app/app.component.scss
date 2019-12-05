@@ -183,57 +183,63 @@ body {
       cursor: pointer;
       transition-duration: 0.4s;
     }
-    img{
-        width:25px;
-        box-shadow: none;
+    img {
+      width: 25px;
+      box-shadow: none;
     }
-    &-btn-facebook{
-        background-color: #436ab0;
+    &-btn-facebook {
+      background-color: #436ab0;
     }
-    &-btn-gmail{
-        background-color: #4489f1;
+    &-btn-gmail {
+      background-color: #4489f1;
     }
-    &-btn-linkedin{
-        background-color: #1379b3;
+    &-btn-linkedin {
+      background-color: #1379b3;
     }
-    &-facebook-icon{
-        background-color: #2e4979;
+    &-facebook-icon {
+      background-color: #2e4979;
     }
-    &-gmail-icon{
-        background-color: #305da2;
+    &-gmail-icon {
+      background-color: #305da2;
     }
-    &-linkedin-icon{
-        background-color: #0c5a87;
+    &-linkedin-icon {
+      background-color: #0c5a87;
     }
-    &-discription{
-        color:#ffffff;
+    &-discription {
+      color: #ffffff;
     }
-
   }
-  &__footer-title{
+  &__footer-title {
+    margin-top: 20px;
     font-size: 12px;
+    a {
+      color: #222;
+    }
+    a:visited {
+      color: #222;
+    }
+    a:hover {
+      color: #2f19c7;
+    }
+  }
+  &__footer-subtitle {
+    a {
+      color: #222;
+    }
+    a:visited {
+      color: #222;
+    }
+    a:hover {
+      color: #2f19c7;
+    }
   }
   button:hover {
     background: rgba(70, 69, 69, 0.5);
-
+  }
 }
-
-}
-
-
-
 
 .terms-footer a :hover {
   color: #2f19c7;
-}
-
-.log-in-footer a {
-  text-decoration: none;
-  color: #222;
-}
-
-.log-in-footer a:visited {
-  color: #222;
 }
 
 input.ng-touched.ng-invalid {
