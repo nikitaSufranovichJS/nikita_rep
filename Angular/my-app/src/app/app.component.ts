@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 
-export class User {
-  name: string;
-  email: string;
-  password: string;
-}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,9 +9,5 @@ export class User {
 })
 export class AppComponent {
   title = 'my-app';
-
-  user: User = new User();
-  addUser(){
-      console.log(this.user);
-    }
 }
+

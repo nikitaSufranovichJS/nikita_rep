@@ -1,1 +1,121 @@
-<p class="info">That's look pretty</p>
+
+
+<div class="f-login">
+        <form class="f-login__content">
+            <div class="f-login__header">
+                <p class="f-login__header-title">Free B2B Matching</p>
+                <p class="f-login__header-subtitle">Find local and global suppliers, partnerships and customers</p>
+            </div>
+        
+            <div class="f-login__sign-up-content">
+                <label for="businessName"></label>
+                <input type="text"
+                       class="f-login__sign-up-content-input"
+                       name="Business name"
+                       id="businessName"
+                       placeholder="Business name"
+                       #name="ngModel"
+                       required 
+                       minlength="4"
+                       maxlength="30"
+                       [(ngModel)]="user.name">
+    
+                <!-- <div *ngIf="name.valid || name.untouched" 
+                      class="f-login__sign-up-content-notification">
+    
+                    <div *ngif="name.errors.required"> 
+                        Name is required
+                    </div>
+                    <div *ngIf="name.errors.minlength">
+                            Name must be at least 4 characters long.
+                    </div>
+                    
+                    <div *ngIf="name.errors.maxlength">
+                            Name can't be more than 30 characters.
+                    </div>
+                    
+                </div> -->
+    
+    <!-- 
+                <span [hidden]="name.valid || name.untouched" 
+                class="f-login__sign-up-content-notification">
+              <p>Name is required</p>
+          </span>
+    -->
+                <label for="businessEmail"></label>
+                <input type="email" 
+                       class="f-login__sign-up-content-input"
+                       name="Business email" 
+                       id="businessEmail"
+                       placeholder="Business email" 
+                       #email="ngModel" 
+                       required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
+                       [(ngModel)]="user.email">
+                <span [hidden]="email.valid || email.untouched" 
+                      class="f-login__sign-up-content-notification">
+                    <p>Email is required</p>
+                </span>
+    
+                <label for="userPassword"></label>
+                <input type="password"
+                       class="f-login__sign-up-content-input"
+                       autocomplete="current-password" 
+                       name="Password"
+                       id="userPassword" 
+                       placeholder="Password" 
+                       #password="ngModel" 
+                       required
+                       [(ngModel)]="user.password">
+                <span [hidden]="password.valid || password.untouched" 
+                      class="f-login__sign-up-content-notification">
+                    <p>Password is required</p>
+                </span>
+            </div>
+            
+            <div class="f-login__sign-up-button">
+                <button [disabled]="name.invalid || email.invalid || password.invalid" (click)="addUser()">SIGN UP NOW</button>
+            </div>
+            <div class="f-login__sign-up-divider">
+                <p>Or</p>
+            </div>
+    
+            <ul class="f-login__sign-up-social">
+                <li><button type="button" 
+                            class="f-login__sign-up-social-btn-facebook">
+                            <span class="f-login__sign-up-social-facebook-icon">
+                            <img src="assets/images/f.png" alt="">
+                            </span>
+                            <span class="f-login__sign-up-social-discription">Continue with Facebook</span>
+                    </button>
+                </li>
+                <li><button type="button" 
+                            class="f-login__sign-up-social-btn-gmail">
+                            <span class="f-login__sign-up-social-gmail-icon">
+                            <img src="assets/images/g.png" alt="">
+                            </span>
+                            <span class="f-login__sign-up-social-discription">Continue with Gmail</span>
+                    </button>
+                </li>
+                <li><button type="button"
+                            class="f-login__sign-up-social-btn-linkedin">
+                            <span class="f-login__sign-up-social-linkedin-icon">
+                            <img src="assets/images/in.png" alt="">
+                            </span>
+                            <span class="f-login__sign-up-social-discription">Continue with LinkedIn</span>
+                    </button>
+                </li>
+            </ul>
+    
+            <div class="f-login__footer-title">
+                <p>By continuing, you agree to Arlians's 
+                    <a href="#">Terms of Use</a>
+                </p>
+            </div>
+            <div class="f-login__footer-subtitle">
+                <p>Already a member? 
+                    <a href="#">Log in</a>
+                </p>
+            </div>
+            
+        </form>
+    </div>
