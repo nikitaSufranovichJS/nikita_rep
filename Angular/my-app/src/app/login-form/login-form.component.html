@@ -8,48 +8,45 @@
             </div>
         
             <div class="f-login__sign-up-content">
+
                 <label for="businessName"></label>
                 <input type="text"
                        class="f-login__sign-up-content-input"
-                       name="Business name"
                        id="businessName"
                        placeholder="Business name"
-                       #name="ngModel"
-                       required 
+                       required
                        minlength="4"
                        maxlength="30"
+                       name="BusinessName"
+                       #name="ngModel"
                        [(ngModel)]="user.name">
-    
-                <!-- <div *ngIf="name.valid || name.untouched" 
-                      class="f-login__sign-up-content-notification">
-    
+  
+                 <div class="f-login__sign-up-content-notification" 
+                      *ngIf="name.touched && !name.valid">
+            
+               <!--      
                     <div *ngif="name.errors.required"> 
                         Name is required
                     </div>
+                         
                     <div *ngIf="name.errors.minlength">
                             Name must be at least 4 characters long.
                     </div>
                     
                     <div *ngIf="name.errors.maxlength">
                             Name can't be more than 30 characters.
-                    </div>
+                    </div>  -->
                     
-                </div> -->
+                </div>
     
-    <!-- 
-                <span [hidden]="name.valid || name.untouched" 
-                class="f-login__sign-up-content-notification">
-              <p>Name is required</p>
-          </span>
-    -->
                 <label for="businessEmail"></label>
                 <input type="email" 
                        class="f-login__sign-up-content-input"
                        name="Business email" 
                        id="businessEmail"
                        placeholder="Business email" 
-                       #email="ngModel" 
                        required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
+                       #email="ngModel" 
                        [(ngModel)]="user.email">
                 <span [hidden]="email.valid || email.untouched" 
                       class="f-login__sign-up-content-notification">
@@ -63,10 +60,10 @@
                        name="Password"
                        id="userPassword" 
                        placeholder="Password" 
-                       #password="ngModel" 
                        required
                        minlength="8"
                        maxlength="30"
+                       #password="ngModel"
                        [(ngModel)]="user.password">
                 <span [hidden]="password.valid || password.untouched" 
                       class="f-login__sign-up-content-notification">
@@ -75,7 +72,10 @@
             </div>
             
             <div class="f-login__sign-up-button">
-                <button [disabled]="name.invalid || email.invalid || password.invalid" (click)="addUser()" routerLink = "/authorized-user" routerLinkActive="active-link">SIGN UP NOW</button>
+                <button [disabled]="name.invalid || email.invalid || password.invalid" 
+                        (click)="addUser()" 
+                        routerLink = "/authorized-user" 
+                        routerLinkActive="active-link">SIGN UP NOW</button>
             </div>
             <div class="f-login__sign-up-divider">
                 <p>Or</p>
@@ -85,7 +85,8 @@
                 <li><button type="button" 
                             class="f-login__sign-up-social-btn-facebook">
                             <span class="f-login__sign-up-social-icon">
-                            <img src="assets/images/f.png" alt="">
+                            <img src="assets/images/f.png" 
+                                 alt="">
                             </span>
                           Continue with Facebook
                     </button>
@@ -93,7 +94,8 @@
                 <li><button type="button" 
                             class="f-login__sign-up-social-btn-gmail" >
                             <span class="f-login__sign-up-social-icon">
-                            <img src="assets/images/g.png" alt="">
+                            <img src="assets/images/g.png" 
+                                 alt="">
                             </span>
                            Continue with Gmail
                     </button>
@@ -101,7 +103,8 @@
                 <li><button type="button"
                             class="f-login__sign-up-social-btn-linkedin">
                             <span class="f-login__sign-up-social-icon">
-                            <img src="assets/images/in.png" alt="">
+                            <img src="assets/images/in.png" 
+                                 alt="">
                             </span>
                            Continue with LinkedIn
                     </button>

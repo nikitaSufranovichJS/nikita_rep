@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 export class User {
   name: string;
   email: string;
@@ -22,4 +23,5 @@ export class LoginFormComponent implements OnInit {
       console.log(this.user);
     }
 }
+
 
