@@ -10,9 +10,9 @@ import { AuthorizedUserComponent } from './authorized-user/authorized-user.compo
 import {RouterModule, Routes} from '@angular/router';
 
 const appRoutes: Routes = [
-  { path:'app-login-form',component:LoginFormComponent },
-  { path:'app-authorized-user',component:AuthorizedUserComponent },
-  { path:'', redirectTo:'/app-login-form', pathMatch:'full' }
+  { path:'login-form',component:LoginFormComponent },
+  { path:'authorized-user',component:AuthorizedUserComponent },
+  { path:'', redirectTo:'/login-form', pathMatch:'full' }
 ]
  
 @NgModule({
@@ -25,7 +25,6 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    
     RouterModule.forRoot(
      appRoutes),
 

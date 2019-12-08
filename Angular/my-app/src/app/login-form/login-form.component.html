@@ -65,15 +65,17 @@
                        placeholder="Password" 
                        #password="ngModel" 
                        required
+                       minlength="8"
+                       maxlength="30"
                        [(ngModel)]="user.password">
                 <span [hidden]="password.valid || password.untouched" 
                       class="f-login__sign-up-content-notification">
-                    <p>Password is required</p>
+                    <p>Password must be greater than 8 characters</p>
                 </span>
             </div>
             
             <div class="f-login__sign-up-button">
-                <button [disabled]="name.invalid || email.invalid || password.invalid" (click)="addUser()">SIGN UP NOW</button>
+                <button [disabled]="name.invalid || email.invalid || password.invalid" (click)="addUser()" routerLink = "/authorized-user" routerLinkActive="active-link">SIGN UP NOW</button>
             </div>
             <div class="f-login__sign-up-divider">
                 <p>Or</p>
@@ -89,7 +91,7 @@
                     </button>
                 </li>
                 <li><button type="button" 
-                            class="f-login__sign-up-social-btn-gmail">
+                            class="f-login__sign-up-social-btn-gmail" >
                             <span class="f-login__sign-up-social-icon">
                             <img src="assets/images/g.png" alt="">
                             </span>

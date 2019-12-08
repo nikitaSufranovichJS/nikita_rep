@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-authorized-user',
+  selector: 'authorized-user',
   templateUrl: './authorized-user.component.html',
-  styleUrls: ['./authorized-user.component.css']
+  styleUrls: ['./authorized-user.component.scss']
 })
 export class AuthorizedUserComponent implements OnInit {
 
