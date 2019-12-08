@@ -30,6 +30,9 @@ const appRoutes: Routes = [
      appRoutes),
 
   ],
+  exports:[
+    [RouterModule]
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
