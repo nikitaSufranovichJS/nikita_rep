@@ -15,13 +15,14 @@ export class User {
 })
 export class LoginFormComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit() {
   }
   user: User = new User();
   addUser(){ 
-      document.write(this.user.name);
+      alert(" Name : "+ this.user.name +"\n Email: " +this.user.email +"\n Password: "+ this.user.password);
     }
   }
 

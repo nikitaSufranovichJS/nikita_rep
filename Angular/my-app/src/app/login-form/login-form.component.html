@@ -23,7 +23,7 @@
   
                  <div class="f-login__sign-up-content-notification" 
                       *ngIf="name.touched && !name.valid">
-            
+                        <p>Name must be greater than 4 characters</p>
                <!--      
                     <div *ngif="name.errors.required"> 
                         Name is required
@@ -124,5 +124,4 @@
             
         </form>
     </div>
-    <h1>{{name}}</h1>
-    <h2>My favorite hero is: {{email}}</h2>
+ 
