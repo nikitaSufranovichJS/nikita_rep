@@ -11,6 +11,7 @@ export class User {
   selector: 'login-form',
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.scss']
+ 
 })
 export class LoginFormComponent implements OnInit {
 
@@ -19,9 +20,9 @@ export class LoginFormComponent implements OnInit {
   ngOnInit() {
   }
   user: User = new User();
-  addUser(){
-      console.log(this.user);
+  addUser(){ 
+      document.write(this.user.name);
     }
-}
+  }
 
 

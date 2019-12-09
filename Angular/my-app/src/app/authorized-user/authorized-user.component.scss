@@ -1,4 +1,27 @@
-p{
-    color:#ffffff;
-    font-size:120px;
+.f-authorized-user {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  &__content {
+    max-width: 360px;
+    text-align: center;
+    background-color: #bdbdbd;
+    color: #2f2f2f;
+    border-radius: 5px;
+    padding: 0 35px 30px 35px;
+  }
+  &__header {
+    padding-top: 30px;
+    &-title {
+      font-size: 30px;
+      font-weight: 600;
+    }
+    &-subtitle {
+      padding-top: 10px;
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
 }
