@@ -1,3 +1,4 @@
+import { UserDataService } from './user-data.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -7,7 +8,8 @@ import { AppComponent } from './app.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { AuthorizedUserComponent } from './authorized-user/authorized-user.component';
 
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes} from '@angular/router';
+
 
 const appRoutes: Routes = [
   { path:'login-form',component:LoginFormComponent },
@@ -32,7 +34,9 @@ const appRoutes: Routes = [
   exports:[
     [RouterModule]
   ],
-  providers: [],
+  providers: [
+    UserDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
