@@ -1,3 +1,4 @@
+import { UserDataService } from 'src/app/user-data.service';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -15,15 +16,19 @@ export class User {
 })
 export class LoginFormComponent implements OnInit {
 
+  constructor(
+    private userDataService: UserDataService,
+  ) {}
+
   ngOnInit() {
   }
   user: User = new User();
+
   public addUser() {
-    console.log(this.user);
+    this.userDataService.userData = this.user;
+    console.log(this.userDataService.userData);
     localStorage.setItem('name', this.user.name);
     localStorage.setItem('email', this.user.email);
     localStorage.setItem('password', this.user.password);
   }
-
-
 }

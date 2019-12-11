@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AuthorizedUserComponent } from './authorized-user.component';
+import { UserDataComponent } from './user-data.component';
 
-describe('AuthorizedUserComponent', () => {
-  let component: AuthorizedUserComponent;
-  let fixture: ComponentFixture<AuthorizedUserComponent>;
+describe('UserDataComponent', () => {
+  let component: UserDataComponent;
+  let fixture: ComponentFixture<UserDataComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AuthorizedUserComponent ]
+      declarations: [ UserDataComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AuthorizedUserComponent);
+    fixture = TestBed.createComponent(UserDataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
