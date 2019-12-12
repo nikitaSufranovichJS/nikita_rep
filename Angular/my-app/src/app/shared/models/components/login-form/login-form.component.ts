@@ -1,12 +1,6 @@
 import { UserDataService } from 'src/app/user-data.service';
-import { Component, OnInit } from '@angular/core';
-
-
-export class User {
-  public name: string;
-  public email: string;
-  public password: string;
-}
+import { Component, OnInit, Output } from '@angular/core';
+import { User } from 'src/app/shared/models/user-data.component';
 
 @Component({
   selector: 'login-form',
@@ -22,7 +16,7 @@ export class LoginFormComponent implements OnInit {
 
   ngOnInit() {
   }
-  user: User = new User();
+   user: User = new User();
 
   public addUser() {
     this.userDataService.userData = this.user;
