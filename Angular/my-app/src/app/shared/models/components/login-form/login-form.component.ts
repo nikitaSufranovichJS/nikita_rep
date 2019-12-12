@@ -1,5 +1,5 @@
 import { UserDataService } from 'src/app/user-data.service';
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/shared/models/user-data.component';
 
 @Component({
