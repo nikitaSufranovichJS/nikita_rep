@@ -1,5 +1,4 @@
-import { UserDataService } from 'src/app/user-data.service';
-import { UserDataSecondService } from 'src/app/user-data-second.service';
+import { UserDataService } from 'src/app/services/user-data-service/user-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,7 +13,6 @@ export class AuthorizedUserComponent implements OnInit {
   
   constructor(
     public readonly userDataService: UserDataService,
-    public readonly userDataSecondService: UserDataSecondService
     ) {}
   
   ngOnInit() {

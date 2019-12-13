@@ -1,51 +1,40 @@
-import { UserData } from 'src/app/shared/models/user-data.component';
-import { UserDataService } from './user-data.service';
-import { UserDataSecondComponent } from './shared/models/components/user-data-second/user-data-second.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginFormComponent } from 'src/app/shared/models/components/login-form/login-form.component';
-import { AuthorizedUserComponent } from 'src/app/shared/models/components/authorized-user/authorized-user.component';
-
 import { RouterModule, Routes} from '@angular/router';
-import { AccountComponent } from 'src/app/pages/account/account.component';
-import { LandingComponent } from 'src/app/pages/landing/landing.component';
 
+import { AccountComponent } from 'src/app/pages/account/view/account.component';
+import { LandingComponent } from 'src/app/pages/landing/view/landing.component';
+import { Services } from './services';
+import { LandingComponents } from './pages/landing';
+import { AccountComponents } from './pages/account';
 
-
+// todo: replace to app route
 const appRoutes: Routes = [
+  { path:'', redirectTo:'/landing', pathMatch:'full' },
   { path:'landing', component: LandingComponent },
   { path:'account', component: AccountComponent },
-  { path:'user-data-second', component: UserDataSecondComponent },
-  { path:'', redirectTo:'/landing', pathMatch:'full' }
 ]
 
 @NgModule({
-  declarations: [
+  declarations: [ 
     AppComponent,
-    LoginFormComponent,
-    AuthorizedUserComponent,
-    UserData,
-    AccountComponent,
-    LandingComponent,
-    UserDataSecondComponent
+    LandingComponents,
+    AccountComponents,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(
-     appRoutes),
-
+    RouterModule.forRoot(appRoutes),
   ],
   exports:[
     [RouterModule]
   ],
   providers: [
-    UserDataService
+    Services,
   ],
   bootstrap: [AppComponent]
 })

@@ -17,8 +17,7 @@
                        maxlength="30"
                        name="BusinessName"
                        #name="ngModel"
-                       [(ngModel)]="user.name">
-  
+                       [(ngModel)]="userData.name">
                  <div class="f-login__sign-up-content-notification" 
                       *ngIf="name.touched && !name.valid">
                         <p>Name must be greater than 4 characters</p>
@@ -32,7 +31,7 @@
                        placeholder="Business email" 
                        required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
                        #email="ngModel" 
-                       [(ngModel)]="user.email">
+                       [(ngModel)]="userData.email">
                 <span [hidden]="email.valid || email.untouched" 
                       class="f-login__sign-up-content-notification">
                     <p>Email is required</p>
@@ -49,7 +48,7 @@
                        minlength="8"
                        maxlength="30"
                        #password="ngModel"
-                       [(ngModel)]="user.password">
+                       [(ngModel)]="userData.password">
                 <span [hidden]="password.valid || password.untouched" 
                       class="f-login__sign-up-content-notification">
                     <p>Password must be greater than 8 characters</p>
@@ -57,10 +56,9 @@
             </div>
             
             <div class="f-login__sign-up-button">
-                <button [disabled]="name.invalid || email.invalid || password.invalid" 
-                        (click)="addUser()" 
-                        routerLink = "/user-data-second" 
-                        routerLinkActive="active-link">SIGN UP NOW</button>
+                <button type="button"
+                        [disabled]="name.invalid || email.invalid || password.invalid" 
+                        (click)="addUser()">SIGN UP NOW</button>
             </div>
             <div class="f-login__sign-up-divider">
                 <p>Or</p>
@@ -78,7 +76,7 @@
                 </li>
                 <li><button type="button" 
                             class="f-login__sign-up-social-btn-gmail" >
-                            <span class="f-login__sign-up-social-icon">
+                            <span class="f-login__sign-up-social-icon">  <!-- todo: NAHERA -->
                             <img src="assets/images/g.png" 
                                  alt="">
                             </span>
