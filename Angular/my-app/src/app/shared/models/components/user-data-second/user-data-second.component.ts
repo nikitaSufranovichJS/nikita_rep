@@ -1,19 +1,21 @@
 import { UserDataSecondService } from 'src/app/user-data-second.service';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { secondUser } from "../../secondUser";
 
 @Component({
-  selector: 'app-user-data-second',
+  selector: 'user-data-second',
   templateUrl: './user-data-second.component.html',
   styleUrls: ['./user-data-second.component.scss']
 })
-export class UserDataSecondComponent implements OnInit {
+export class UserDataSecondComponent{
 
   constructor(
     private userDataSecondService: UserDataSecondService,
-    ) {}
-  
-
-  ngOnInit() {
+  ) {}
+ 
+  user: secondUser = new secondUser();
+  public addUser() {
+    this.userDataSecondService.userDataSecond = this.user;
+    console.log(this.userDataSecondService.userDataSecond);
   }
-
 }

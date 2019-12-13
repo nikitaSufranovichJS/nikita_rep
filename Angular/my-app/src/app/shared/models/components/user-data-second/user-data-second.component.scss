@@ -1,10 +1,46 @@
-.f-login{
-    margin:100px 0 100px 0;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    &__header{
-        
+.f-login {
+  margin: 100px 0 100px 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  &__header {
+    &-title {
+      padding: 40px 0 0 0;
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 10px;
     }
+    &-subtitle {
+      padding: 0 60px 0;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+  }
+  &__content{
+      input{
+        vertical-align: baseline;
+        border-radius: 3px;
+        border: solid 1px #dbdbdb;
+        height: 40px;
+        width: 100%;
+        padding: 0 0 0 15px;
+        margin-top: 17px;
+        outline: none;
+      }
+      button {
+        margin-top: 30px;
+        background-color: #00a79d;
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 400;
+        border-radius: 3px;
+        border: none;
+        width: 100%;
+        padding: 10px 0 10px 0;
+        cursor: pointer;
+        transition-duration: 0.4s;
+      }
+  }
 }

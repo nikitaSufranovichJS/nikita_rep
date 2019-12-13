@@ -1,4 +1,4 @@
-import { User } from 'src/app/shared/models/user-data.component';
+import { UserData } from 'src/app/shared/models/user-data.component';
 import { UserDataService } from './user-data.service';
 import { UserDataSecondComponent } from './shared/models/components/user-data-second/user-data-second.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,6 +19,7 @@ import { LandingComponent } from 'src/app/pages/landing/landing.component';
 const appRoutes: Routes = [
   { path:'landing', component: LandingComponent },
   { path:'account', component: AccountComponent },
+  { path:'user-data-second', component: UserDataSecondComponent },
   { path:'', redirectTo:'/landing', pathMatch:'full' }
 ]
 
@@ -27,7 +28,7 @@ const appRoutes: Routes = [
     AppComponent,
     LoginFormComponent,
     AuthorizedUserComponent,
-    User,
+    UserData,
     AccountComponent,
     LandingComponent,
     UserDataSecondComponent

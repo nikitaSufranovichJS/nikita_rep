@@ -1,3 +1,39 @@
 <div class="f-login">
-    <div class="f-login__header"></div>
+    <div class="f-login__header">
+        <p class="f-login__header-title"></p>
+        <p class="f-login__header-subtitle"></p>
+    </div>
+    <div class="f-login__content">
+        <label for="secondName"></label>
+        <input type="text"
+               class="f-login__content-input"
+               id="secondName"
+               placeholder="Name"
+               required
+               minlength="4"
+               maxlength="30"
+               name="Name"
+               #name="ngModel"
+               [(ngModel)]="user.second_name">
+
+               <label for="userPassword"></label>
+               <input type="password"
+                      class="f-login__content-input"
+                      autocomplete="current-password" 
+                      name="Password"
+                      id="secondPassword" 
+                      placeholder="Password" 
+                      required
+                      minlength="8"
+                      maxlength="30"
+                      #password="ngModel"
+                      [(ngModel)]="user.second_password">
+
+        <div class="f-login__content">
+        <button type="button" 
+                (click)="addUser()" 
+                routerLink = "/account" 
+                routerLinkActive="active-link">SUBMIT</button>
+        </div>
+    </div>
 </div>
