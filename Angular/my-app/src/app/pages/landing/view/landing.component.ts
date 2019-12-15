@@ -11,6 +11,8 @@ export class LandingComponent {
   constructor(
     public userDataService: UserDataService,
   ) {}
-  
+  public addUser() :void {
+    localStorage.setItem('userData', JSON.stringify(this.userDataService.userData));
+  }
 }
  

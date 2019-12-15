@@ -10,11 +10,13 @@ import { UserData } from 'src/app/shared/models/user-data.model';
 export class LoginFormComponent {
   // todo input output
   @Input() public userData: UserData;
-  @Output() public childEvent = new EventEmitter();
+  @Output() public addUserEvent = new EventEmitter();
 
   public addUser(): void {
     console.log(this.userData);
-    localStorage.setItem('userData', JSON.stringify(this.userData)); 
-    // todo: redirect to next page
+    this.addUserEvent.emit(this.userData);
   }
+ 
 } 
+
+/* todo: header */
