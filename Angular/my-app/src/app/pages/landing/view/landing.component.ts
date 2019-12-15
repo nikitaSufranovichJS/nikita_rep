@@ -6,13 +6,11 @@ import { UserDataService } from 'src/app/services/user-data-service/user-data.se
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss']
 })
+
 export class LandingComponent {
-  
   constructor(
     public userDataService: UserDataService,
-  ) {
-    
-  }
+  ) {}
   
 }
  

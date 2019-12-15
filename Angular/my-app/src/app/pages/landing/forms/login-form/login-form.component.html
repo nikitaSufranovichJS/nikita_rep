@@ -54,41 +54,38 @@
                     <p>Password must be greater than 8 characters</p>
                 </span>
             </div>
-            
             <div class="f-login__sign-up-button">
                 <button type="button"
                         [disabled]="name.invalid || email.invalid || password.invalid" 
-                        (click)="addUser()">SIGN UP NOW</button>
+                        (click)="addUser();"
+                        routerLink="/account">SIGN UP NOW</button>
             </div>
             <div class="f-login__sign-up-divider">
-                <p>Or</p>
+                <p>Or</p> 
             </div>
     
             <ul class="f-login__sign-up-social">
                 <li><button type="button" 
-                            class="f-login__sign-up-social-btn-facebook">
-                            <span class="f-login__sign-up-social-icon">
-                            <img src="assets/images/f.png" 
-                                 alt="">
-                            </span>
+                            class="f-login__sign-up-social-btn-facebook">                          
+                            <img class="f-login__sign-up-social-icon" 
+                                 src="assets/images/f.png" 
+                                 alt="">                
                           Continue with Facebook
                     </button>
                 </li>
                 <li><button type="button" 
                             class="f-login__sign-up-social-btn-gmail" >
-                            <span class="f-login__sign-up-social-icon">  <!-- todo: NAHERA -->
-                            <img src="assets/images/g.png" 
+                            <img class="f-login__sign-up-social-icon"
+                                 src="assets/images/g.png" 
                                  alt="">
-                            </span>
                            Continue with Gmail
                     </button>
                 </li>
                 <li><button type="button"
                             class="f-login__sign-up-social-btn-linkedin">
-                            <span class="f-login__sign-up-social-icon">
-                            <img src="assets/images/in.png" 
+                            <img class="f-login__sign-up-social-icon" 
+                                 src="assets/images/in.png" 
                                  alt="">
-                            </span>
                            Continue with LinkedIn
                     </button>
                 </li>

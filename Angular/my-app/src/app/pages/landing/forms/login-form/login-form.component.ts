@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { UserData } from 'src/app/shared/models/user-data.model';
 
 @Component({
@@ -7,16 +7,14 @@ import { UserData } from 'src/app/shared/models/user-data.model';
   styleUrls: ['./login-form.component.scss']
 })
 // todo: read about lificycles angular
-export class LoginFormComponent implements OnInit {
+export class LoginFormComponent {
   // todo input output
   @Input() public userData: UserData;
-
-  public ngOnInit(): void {
-    console.log(this.userData);
-  }
+  @Output() public childEvent = new EventEmitter();
 
   public addUser(): void {
-    /* localStorage.setItem('userData', JSON.stringify(this.userDataService.userData)); */
+    console.log(this.userData);
+    localStorage.setItem('userData', JSON.stringify(this.userData)); 
     // todo: redirect to next page
   }
 } 

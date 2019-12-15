@@ -6,8 +6,8 @@ import { UserData } from 'src/app/shared/models/user-data.model';
 })
 export class UserDataService {
   public userData: UserData = {
-    name:'gfgsfgdg',
-    email:'nikjitdas',
-    password:'gfdgfdgfdg'
+    name:'',
+    email:'',
+    password:''
   };
 }

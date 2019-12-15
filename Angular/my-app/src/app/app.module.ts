@@ -28,7 +28,6 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes),
   ],
   exports:[
     [RouterModule]

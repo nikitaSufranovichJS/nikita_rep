@@ -3,8 +3,6 @@
     "node_modules/codelyzer"
   ],
   "rules": {
-    // todo check this rules https://github.com/ng-seed/angular-tslint-rules/blob/master/tslint.json
-    // base tslint rules
     "arrow-return-shorthand": true,
     "no-duplicate-imports": true,
     "no-angle-bracket-type-assertion": true,
