@@ -10,6 +10,7 @@ import { LandingComponent } from 'src/app/pages/landing/view/landing.component';
 import { Services } from './services';
 import { LandingComponents } from './pages/landing';
 import { AccountComponents } from './pages/account';
+import { HeaderComponent } from './pages/account/header/header.component';
 
 // todo: replace to app route
 const appRoutes: Routes = [
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
     AppComponent,
     LandingComponents,
     AccountComponents,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

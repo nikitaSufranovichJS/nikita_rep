@@ -1,5 +1,5 @@
-import { UserDataSecondComponent } from './addWorkspaceForm/user-data-second.component';
+import { WorkspaceUser } from './addWorkspaceForm/workspace.component';
 
 export const FORMS = [
-    UserDataSecondComponent,
+    WorkspaceUser,
 ]

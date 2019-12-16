@@ -8,7 +8,6 @@ import { UserData } from 'src/app/shared/models/user-data.model';
 })
 // todo: read about lificycles angular
 export class LoginFormComponent {
-  // todo input output
   @Input() public userData: UserData;
   @Output() public addUserEvent = new EventEmitter();
 
