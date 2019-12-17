@@ -1,24 +1,16 @@
+import { WorkspaceService } from 'src/app/services/workspace.service/workspace.service';
 import { UserDataService } from 'src/app/services/user-data-service/user-data.service';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'authorized-user',
   templateUrl: './authorized-user.component.html',
   styleUrls: ['./authorized-user.component.scss']
 })
-export class AuthorizedUserComponent implements OnInit {
-  public myName: string;
-  public myEmail: string;
-  public myPassword: string;
-  
+export class AuthorizedUserComponent{
   constructor(
     public readonly userDataService: UserDataService,
+    public readonly workspaceService: WorkspaceService,
     ) {}
-  
-  ngOnInit() {
-    this.myName = localStorage.getItem('name');
-    this.myEmail = localStorage.getItem('email');
-    this.myPassword = localStorage.getItem('password');
-  }
 }
 

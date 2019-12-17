@@ -1,18 +1,18 @@
 .f-login {
-  margin: 100px 0 100px 0;
+  margin: 100px 0 100px 0; // todo
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: center;
   &__header {
     &-title {
-      padding: 40px 0 0 0;
+      padding: 40px 0 0 0;// todo
       font-size: 30px;
       font-weight: 600;
       margin-bottom: 10px;
     }
     &-subtitle {
-      padding: 0 60px 0;
+      padding: 0 60px 0;// todo
       font-size: 14px;
       font-weight: 400;
       margin-bottom: 10px;
@@ -25,7 +25,7 @@
         border: solid 1px #dbdbdb;
         height: 40px;
         width: 100%;
-        padding: 0 0 0 15px;
+        padding: 0 0 0 15px; // todo
         margin-top: 17px;
         outline: none;
       }
@@ -38,9 +38,10 @@
         border-radius: 3px;
         border: none;
         width: 100%;
-        padding: 10px 0 10px 0;
-        cursor: pointer;
-        transition-duration: 0.4s;
+        padding: 10px 0 10px 0;// todo
+        cursor: pointer; // todo
+        transition-duration: 0.4s; // todo
+        // todo: hover
       }
   }
 }

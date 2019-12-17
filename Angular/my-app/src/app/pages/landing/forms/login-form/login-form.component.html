@@ -1,13 +1,14 @@
+<!-- todo: why div -->
 <div class="f-login">
         <form class="f-login__content">
             <div class="f-login__header">
+                <!-- todo: why p -->
                 <p class="f-login__header-title">Free B2B Matching</p>
                 <p class="f-login__header-subtitle">Find local and global suppliers partnerships and customers</p>
             </div>
-        
             <div class="f-login__sign-up-content">
-
                 <label for="businessName"></label>
+                <!-- todo: class at first -->
                 <input type="text"
                        class="f-login__sign-up-content-input"
                        id="businessName"
@@ -18,25 +19,26 @@
                        name="BusinessName"
                        #name="ngModel"
                        [(ngModel)]="userData.name">
+                <!-- todo: why div -->
                  <div class="f-login__sign-up-content-notification" 
                       *ngIf="name.touched && !name.valid">
                         <p>Name must be greater than 4 characters</p>
                 </div>
-    
                 <label for="businessEmail"></label>
                 <input type="email" 
                        class="f-login__sign-up-content-input"
-                       name="Business email" 
+                       name="Business email"
                        id="businessEmail"
                        placeholder="Business email" 
                        required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
                        #email="ngModel" 
                        [(ngModel)]="userData.email">
+                <!-- todo: why span -->
+                <!-- [class._hidden] -->
                 <span [hidden]="email.valid || email.untouched" 
                       class="f-login__sign-up-content-notification">
                     <p>Email is required</p>
                 </span>
-    
                 <label for="userPassword"></label>
                 <input type="password"
                        class="f-login__sign-up-content-input"
@@ -55,15 +57,15 @@
                 </span>
             </div>
             <div class="f-login__sign-up-button">
+                 <!-- button !== a -->
                 <button type="button"
                         [disabled]="name.invalid || email.invalid || password.invalid" 
                         (click)="addUser();"
-                        routerLink="/workspaceUser">SIGN UP NOW</button>
+                        routerLink="/workspace">SIGN UP NOW</button>
             </div>
             <div class="f-login__sign-up-divider">
                 <p>Or</p> 
             </div>
-    
             <ul class="f-login__sign-up-social">
                 <li><button type="button" 
                             class="f-login__sign-up-social-btn-facebook">                          
@@ -90,7 +92,6 @@
                     </button>
                 </li>
             </ul>
-    
             <div class="f-login__footer-title">
                 <p>By continuing, you agree to Arlians's 
                     <a href="#">Terms of Use</a>
@@ -100,8 +101,7 @@
                 <p>Already a member? 
                     <a href="#">Log in</a>
                 </p>
-            </div>
-            
+            </div>  
         </form>
     </div>
  
