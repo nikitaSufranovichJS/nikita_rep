@@ -1,31 +1,31 @@
 .f-login {
-  margin: 100px 0 100px 0; // todo
+  margin: 100px 0; // todo   done
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: center;
   &__header {
+    padding-top:30px;
     &-title {
-      padding: 40px 0 0 0;// todo
+      padding: 40px 0 ;// todo   done
       font-size: 30px;
       font-weight: 600;
       margin-bottom: 10px;
     }
-    &-subtitle {
-      padding: 0 60px 0;// todo
-      font-size: 14px;
-      font-weight: 400;
-      margin-bottom: 10px;
-    }
   }
   &__content{
+      max-width: 360px;
+      text-align: center;
+      background-color: #bdbdbd;
+      border-radius: 5px;
+      padding: 0 35px 30px 35px;
       input{
         vertical-align: baseline;
         border-radius: 3px;
         border: solid 1px #dbdbdb;
         height: 40px;
         width: 100%;
-        padding: 0 0 0 15px; // todo
+        padding: 0 15px 0; // todo   done
         margin-top: 17px;
         outline: none;
       }
@@ -38,10 +38,12 @@
         border-radius: 3px;
         border: none;
         width: 100%;
-        padding: 10px 0 10px 0;// todo
-        cursor: pointer; // todo
-        transition-duration: 0.4s; // todo
-        // todo: hover
+        padding: 10px 0;// todo   done
+        &:hover{  // todo: hover   done
+          background: rgba(70, 69, 69, 0.5);
+          cursor: pointer; // todo:   done
+          transition-duration: 0.4s; // todo:  done
       }
+    }
   }
 }

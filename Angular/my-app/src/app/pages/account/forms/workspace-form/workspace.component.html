@@ -1,30 +1,33 @@
 <!-- todo -->
-<div class="f-login">
+<form action="" 
+      class="f-login">
     <div class="f-login__content">
-        <label for="workspaceName"></label>
-        <!-- todo -->
-        <input type="text"
-               class="f-login__content-input"
-               id="workspace-name"
-               placeholder="Name"
-               required
-               minlength="4"
-               maxlength="30"
-               name="workspaceName"
-               #name="ngModel"
-               [(ngModel)]="workspaceUser.workspaceName">
-        <label for="workspacePassword"></label>
-        <input type="password"
-               class="f-login__content-input"
-               autocomplete="current-password" 
-               name="workspacePassword"
-               id="workspacePassword" 
-               placeholder="Password" 
-               required
-               minlength="8"
-               maxlength="30"
-               #password="ngModel"
-               [(ngModel)]="workspaceUser.workspacePassword">
+        <div class="f-login__header">
+            <span class="f-login__header-title">Введите данные</span>
+        </div>
+        <label><!-- todo    done-->   
+            <input class="f-login__content-input"
+                   type="text"
+                   placeholder="Name"
+                   required
+                   minlength="4"
+                   maxlength="30"
+                   name="workspaceName"
+                   #name="ngModel"
+                   [(ngModel)]="workspaceUser.workspaceName">
+        </label>
+        <label>
+            <input class="f-login__content-input"
+                   type="password"
+                   autocomplete="current-password" 
+                   name="workspacePassword"
+                   placeholder="Password" 
+                   required
+                   minlength="8"
+                   maxlength="30"
+                   #password="ngModel"
+                   [(ngModel)]="workspaceUser.workspacePassword">
+        </label>
         <div class="f-login__content">
             <!-- todo -->
             <button type="button"
@@ -32,4 +35,4 @@
                     routerLink = "/account">SUBMIT</button>
         </div>
     </div>
-</div>
+</form>

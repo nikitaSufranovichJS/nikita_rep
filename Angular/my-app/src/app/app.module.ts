@@ -8,7 +8,7 @@ import { RouterModule} from '@angular/router';
 import { Services } from './services';
 import { LandingComponents } from './pages/landing';
 import { AccountComponents } from './pages/account';
-import { HeaderComponent } from './pages/account/header/header.component';
+import { HeaderComponent } from './shared/header/header.component';
 import { WorkspaceUserComponent } from './pages/account/workspace-user/workspace-user.component';
 
 @NgModule({
