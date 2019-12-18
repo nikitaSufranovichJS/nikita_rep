@@ -3,6 +3,17 @@
   <div class="section-authorized-user__content">
       <div class="section-authorized-user__header">
           <span class="section-authorized-user__header-title">Authorized users</span>
+          <span>(local storage)</span>
+          <span class="section-authorized-user__header-subtitle">Welcome {{ myName | uppercase }}</span>
+          <span>Your email is: {{ myEmail }} </span>
+          <span>Your password is: {{ myPassword }} </span>
+      </div>
+  </div>
+</div>
+<div class="section-authorized-user">
+  <div class="section-authorized-user__content">
+      <div class="section-authorized-user__header">
+          <span class="section-authorized-user__header-title">Authorized users</span>
           <span>(service)</span>
           <span class="section-authorized-user__header-subtitle">Welcome {{ userDataService.userData.name | uppercase }}</span>
           <span>Your email is: {{ userDataService.userData.email }} </span>

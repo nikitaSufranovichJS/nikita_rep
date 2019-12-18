@@ -1,12 +1,12 @@
 <!-- todo    done-->
 <form action="" 
-      class="recover-form">
-    <div class="recover-form__content">
-        <div class="recover-form__header">
-            <span class="recover-form__header-title">Введите данные</span>
+      class="recover">
+    <div class="recover__content">
+        <div class="recover__header">
+            <span class="recover__header-title">Введите данные</span>
         </div>
         <label><!-- todo    done-->   
-            <input class="recover-form__content-input"
+            <input class="recover__content-input"
                    type="text"
                    placeholder="Name"
                    required
@@ -17,7 +17,7 @@
                    [(ngModel)]="recoverPasswordUser.Name">
         </label>
         <label>
-            <input class="recover-form__content-input"
+            <input class="recover__content-input"
                    type="password"
                    autocomplete="current-password" 
                    name="workspacePassword"
@@ -28,11 +28,11 @@
                    #password="ngModel"
                    [(ngModel)]="recoverPasswordUser.Password">
         </label>
-        <div class="recover-form__content">
-            <!-- todo -->
+        <div class="recover__content">
+            <!-- todo   done-->
             <button type="button"
                     (click)="addUserWorkspace();"
-                    routerLink = "/account">SUBMIT</button>
+                    >SUBMIT</button>
         </div>
     </div>
 </form>

@@ -21,10 +21,11 @@
                        [(ngModel)]="userData.name">
                 </label>
                 <!-- todo: why div -->
-                 <div class="login__sign-up-content-notification" 
+                <div class="login__sign-up-content-notification" 
                       *ngIf="name.touched && !name.valid">
-                        <p>Name must be greater than 4 characters</p>
+                <span>Name must be greater than 4 characters</span>
                 </div>
+                
                 <label>
                 <input class="login__sign-up-content-input"
                        type="email" 
@@ -60,11 +61,11 @@
                 </span>
             </div>
             <div class="login__sign-up-button">
-                 <!-- button !== a -->
+                 <!-- button !== a   done-->
                 <button type="button"
                         [disabled]="name.invalid || email.invalid || password.invalid" 
                         (click)="addUser();"
-                        routerLink="/recover">SIGN UP NOW</button>
+                        >SIGN UP NOW</button>
             </div>
             <div class="login__sign-up-divider">
                 <span>Or</span> 

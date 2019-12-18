@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { RouterModule} from '@angular/router';
 
 import { Services } from './services';
-import { LandingComponents } from './pages/login';
+import { LoginComponents } from './pages/login';
 import { AccountComponents } from './pages/profile';
 import { HeaderComponent } from './shared/header/header.component';
 import { RecoverUserComponent } from './pages/password-recover/view/recover-user.component';
@@ -14,7 +14,7 @@ import { RecoverUserComponent } from './pages/password-recover/view/recover-user
 @NgModule({
   declarations: [ 
     AppComponent,
-    LandingComponents,
+    LoginComponents,
     AccountComponents,
     HeaderComponent,
     RecoverUserComponent,

@@ -1,18 +1,23 @@
 import { UserData } from 'src/app/shared/models/user-data.model';
+import { Router } from '@angular/router';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'login-form',
-  templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.scss']
+  selector: 'login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
 
-export class LoginFormComponent {
+export class LoginComponent {
   @Input() public userData: UserData;
   @Output() public addUserEvent = new EventEmitter();
 
-  public addUser(): void{
-    console.log(this.userData);
+  constructor(
+    private router: Router
+  ) {}
+
+  public addUser(): void {
     this.addUserEvent.emit(this.userData);
+    this.router.navigate(['/recover']);
   }
 }

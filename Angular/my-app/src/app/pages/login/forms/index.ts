@@ -1,5 +1,5 @@
-import { LoginFormComponent } from './login-form/login-form.component';
+import { LoginComponent } from './login/login.component';
 
 export const FORMS = [
-    LoginFormComponent,
+    LoginComponent,
 ]
