@@ -1,4 +1,4 @@
-import { UserDataService } from 'src/app/services/user-data-service/user-data.service';
+import { UserDataService } from 'src/app/services/user-data.service';
 import { Component } from '@angular/core';
 
 @Component({

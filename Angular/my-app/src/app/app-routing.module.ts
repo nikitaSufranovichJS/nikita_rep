@@ -1,16 +1,16 @@
-import { LandingComponent } from './pages/landing/view/landing.component';
-import { AccountComponent } from './pages/account/view/account.component';
-import { WorkspaceUserComponent } from './pages/account/workspace-user/workspace-user.component';
+import { LandingComponent } from './pages/login/view/landing.component';
+import { AccountComponent } from './pages/profile/view/account.component';
+import { RecoverUserComponent } from './pages/password-recover/view/recover-user.component';
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  { path:'', redirectTo:'/landing', pathMatch:'full' },
-  { path:'landing', component: LandingComponent },
-  { path:'workspace', component: WorkspaceUserComponent },
-  { path:'account', component: AccountComponent },
+  { path:'', redirectTo:'/login', pathMatch:'full' },
+  { path:'login', component: LandingComponent },
+  { path:'recover', component: RecoverUserComponent },
+  { path:'profile', component: AccountComponent },
 ];
 
 @NgModule({

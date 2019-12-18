@@ -1,12 +1,12 @@
-<!-- todo -->
+<!-- todo    done-->
 <form action="" 
-      class="f-login">
-    <div class="f-login__content">
-        <div class="f-login__header">
-            <span class="f-login__header-title">Введите данные</span>
+      class="recover-form">
+    <div class="recover-form__content">
+        <div class="recover-form__header">
+            <span class="recover-form__header-title">Введите данные</span>
         </div>
         <label><!-- todo    done-->   
-            <input class="f-login__content-input"
+            <input class="recover-form__content-input"
                    type="text"
                    placeholder="Name"
                    required
@@ -14,10 +14,10 @@
                    maxlength="30"
                    name="workspaceName"
                    #name="ngModel"
-                   [(ngModel)]="workspaceUser.workspaceName">
+                   [(ngModel)]="recoverPasswordUser.Name">
         </label>
         <label>
-            <input class="f-login__content-input"
+            <input class="recover-form__content-input"
                    type="password"
                    autocomplete="current-password" 
                    name="workspacePassword"
@@ -26,9 +26,9 @@
                    minlength="8"
                    maxlength="30"
                    #password="ngModel"
-                   [(ngModel)]="workspaceUser.workspacePassword">
+                   [(ngModel)]="recoverPasswordUser.Password">
         </label>
-        <div class="f-login__content">
+        <div class="recover-form__content">
             <!-- todo -->
             <button type="button"
                     (click)="addUserWorkspace();"

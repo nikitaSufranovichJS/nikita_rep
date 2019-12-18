@@ -1,5 +1,5 @@
-import { WorkspaceService } from 'src/app/services/workspace.service/workspace.service';
-import { UserDataService } from 'src/app/services/user-data-service/user-data.service';
+import { RecoverPasswordService } from 'src/app/services/recover-password.service';
+import { UserDataService } from 'src/app/services/user-data.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class AuthorizedUserComponent{
   constructor(
     public readonly userDataService: UserDataService,
-    public readonly workspaceService: WorkspaceService,
+    public readonly recoverService: RecoverPasswordService,
     ) {}
 }
 

@@ -6,10 +6,10 @@ import { AppComponent } from './app.component';
 import { RouterModule} from '@angular/router';
 
 import { Services } from './services';
-import { LandingComponents } from './pages/landing';
-import { AccountComponents } from './pages/account';
+import { LandingComponents } from './pages/login';
+import { AccountComponents } from './pages/profile';
 import { HeaderComponent } from './shared/header/header.component';
-import { WorkspaceUserComponent } from './pages/account/workspace-user/workspace-user.component';
+import { RecoverUserComponent } from './pages/password-recover/view/recover-user.component';
 
 @NgModule({
   declarations: [ 
@@ -17,7 +17,7 @@ import { WorkspaceUserComponent } from './pages/account/workspace-user/workspace
     LandingComponents,
     AccountComponents,
     HeaderComponent,
-    WorkspaceUserComponent,
+    RecoverUserComponent,
   ],
   imports: [
     BrowserModule,
